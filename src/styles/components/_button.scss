@@ -1,2 +1,20 @@
+@import "../variables/index";
+
 .cs-button {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  color: $text-color-regular;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  background: $color-white;
+  border: 1px solid $border-color-base;
+  border-radius: 4px;
+  outline: none;
+  transition: 0.1s;
 }

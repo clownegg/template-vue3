@@ -6,12 +6,16 @@ const Button = defineComponent({
   name: 'CsButton',
   setup(props) {
     return () => {
-      const { label, autoFocus } = props;
+      const { label, autoFocus, loading, disabled, onClick } = props;
 
       return (
         <button
           class={{
             'cs-button': true
+          }}
+          disabled={loading || disabled}
+          onClick={event => {
+            onClick?.(event);
           }}
           autofocus={autoFocus}
         >
