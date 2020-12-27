@@ -1,0 +1,30 @@
+@import "../variables/index";
+
+@mixin button-variant($color, $background-color, $border-color) {
+  color: $color;
+  background: $background-color;
+  border-color: $border-color;
+
+  &:hover {
+    color: $color;
+    background: mix($color-white, $background-color, 20%);
+    border-color: mix($color-white, $border-color, 20%);
+  }
+
+  &:active {
+    color: $color;
+    background: mix($color-white, $background-color, 10%);
+    border-color: mix($color-white, $border-color, 10%);
+  }
+
+  &.is-disabled {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color-white;
+      background-color: mix($background-color, $color-white);
+      border-color: mix($border-color, $color-white);
+    }
+  }
+}

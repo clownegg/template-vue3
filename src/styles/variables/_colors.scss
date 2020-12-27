@@ -1,8 +1,36 @@
-/** Color */
+/**
+-------------------------------------
+  Color
+-------------------------------------
+*/
+// white
 $color-white: #fff;
+$color-white-gr1: #f9f9f9;
 
-/** Text */
+// black
+$color-black: #000;
+
+/**
+-------------------------------------
+  BootStrap
+-------------------------------------
+*/
+$color-primary: #409eff;
+$color-success: #67c23a;
+$color-warning: #e6a23c;
+$color-danger: #f56c6c;
+
+/**
+-------------------------------------
+  Text
+-------------------------------------
+*/
 $text-color-regular: #606266;
+$text-color-disabled: #c0c4cc;
 
-/** Border */
+/**
+-------------------------------------
+  Border
+-------------------------------------
+*/
 $border-color-base: #dcdfe6;

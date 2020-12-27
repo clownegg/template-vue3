@@ -1,4 +1,5 @@
 @import "../variables/index";
+@import "../mixins//index";
 
 .cs-button {
   box-sizing: border-box;
@@ -17,4 +18,43 @@
   border-radius: 4px;
   outline: none;
   transition: 0.1s;
+
+  & + & {
+    margin-left: 10px;
+  }
+
+  &:hover {
+    background: $color-white-gr1;
+  }
+
+  &:active {
+    transform: translateY(0.5px);
+  }
+
+  &:disabled {
+    &,
+    &:hover,
+    &:focus {
+      color: $text-color-disabled;
+      cursor: not-allowed;
+      background: $color-white;
+      background-image: none;
+    }
+  }
+
+  &--primary {
+    @include button-variant($color-white, $color-primary, $color-primary);
+  }
+
+  &--success {
+    @include button-variant($color-white, $color-success, $color-success);
+  }
+
+  &--warning {
+    @include button-variant($color-white, $color-warning, $color-warning);
+  }
+
+  &--danger {
+    @include button-variant($color-white, $color-danger, $color-danger);
+  }
 }
